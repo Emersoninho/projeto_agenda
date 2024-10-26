@@ -12,3 +12,6 @@ class Contact(models.Model):
     # show
     # owner
     # picture
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
