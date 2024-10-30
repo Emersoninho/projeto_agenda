@@ -17,11 +17,11 @@ def search(request):
     if search_value == '':
         return redirect('contact:index')
     
-    contacts = Contact.objects.filter(Q(first_name__icontains=search_value) | 
-                                      Q(last_name__icontains=search_value) |
-                                      Q(phone__icontains=search_value) | 
-                                      Q(email__icontains=search_value), 
-                                      show=True).order_by('-id')
+    contacts = Contact.objects.filter(
+        Q(first_name__icontains=search_value) |                               
+        Q(last_name__icontains=search_value) |
+        Q(phone__icontains=search_value) | 
+        Q(email__icontains=search_value), show=True).order_by('-id')
     
     context = {
         'contacts': contacts,
