@@ -25,7 +25,8 @@ def search(request):
     
     context = {
         'contacts': contacts,
-        'site_title': 'Contatos - '
+        'site_title': 'Contatos - ',
+        'search_value': search_value
     }
     return render(request, 'contact/index.html', context)
 
