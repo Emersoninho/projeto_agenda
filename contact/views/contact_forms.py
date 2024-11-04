@@ -5,4 +5,4 @@ def create(request):
     context = {
         
     }
-    return render(request, 'create.html', context)
+    return render(request, 'contact/create.html', context)
